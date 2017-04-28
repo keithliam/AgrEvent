@@ -3,9 +3,11 @@ $(document).ready(function(){
 		constrainWidth: false,
 		hover: true
 	});
+	$('.slider').slider();
+});
 
-	// clear existing data
-	for(var i = 0; i < 1; i++) $('div.row').eq(i).remove();
+function initCards(){
+	// for(var i = 0; i < 1; i++) $('div.row').eq(i).remove();
 	var socket = io('http://localhost:3000');
 	// receives data from socket 'event'
 	socket.on('event', function (data){
@@ -24,7 +26,7 @@ $(document).ready(function(){
 				else $('div.row').eq(numOfRow).html('<div class="col s6 m6"></div>');
 				// card + info creator
 				tabNum = numOfCol * 3;
-				var html = '<div class="card small light-green lighten-5"><div class="card-tabs"><ul class="tabs tabs-fixed-width light-green lighten-3"><li class="tab"><a href="#tab'
+				var html = '<div class="card hoverable small light-green lighten-5"><div class="card-tabs"><ul class="tabs tabs-fixed-width light-green lighten-3"><li class="tab"><a href="#tab'
 				+ tabNum + '" class="active">Event</a></li><li class="tab"><a href="#tab'
 				+ (tabNum + 1) + '">Date &amp Location</a></li><li class="tab"><a href="#tab'
 				+ (tabNum + 2) + '">More Details</a></li></ul></div><div class="card-content grey-text text-darken-4"><div id="tab'
@@ -46,5 +48,5 @@ $(document).ready(function(){
  				$('ul.tabs').tabs();	// initalizes tabs; makes the tab indicator functional
 			}
 		}
-  });
-});
+	});
+}

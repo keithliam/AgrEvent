@@ -5,9 +5,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <style>
       .tab { margin-left: 30px }
+      #calendar, #calendars {
+        max-width: 900px;
+        margin: 0 auto;
+      }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>AgrEvent</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.1/fullcalendar.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.1/fullcalendar.print.css">
   </head>
   <body>
     <nav class="light-green darken-2">
@@ -30,57 +36,31 @@
       <div class="container light-green-text text-darken-3">
         <br>
         <br>
+        <h1 class="header center light-green-text text-darken-3">All Events</h1>
         <div class="row">
-          <h1 class="header center light-green-text text-darken-3">My Profile</h1>
-        </div>
-        <div class="row">
-          <div class="col s6">
-            <h5>Full Name</h5>
-            <p class="black-text tab">Marko Digong "Stonefish" Carpio</p>
-          </div>
-          <div class="col s6">
-            <h5>Interests</h5>
-            <p class="black-text tab">Organic, Vegetables, Leaf Vegetables</p>
+          <div class="col s12">
+            <div id='calendar'></div>
           </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <h1 class="header center light-green-text text-darken-3">Your Events</h1>
         <div class="row">
-          <div class="col s6">
-            <h5>Farm Name</h5>
-            <p class="black-text tab">Stonefish Farm</p>
-          </div>
-          <div class="col s6">
-            <h5>Farm Location</h5>
-            <p class="black-text tab">Los Baños, Laguna</p>
+          <div class="col s12">
+            <div id='calendars'></div>
           </div>
         </div>
-        <div class="row">
-          <div class="col s6">
-            <h5>Primary Products</h5>
-            <p class="black-text tab">Cabbage, Lettuce, Pechay (Chinese White Cabbage)</p>
-          </div>
-          <div class="col s6">
-            <h5>Secondary Products</h5>
-            <p class="black-text tab">Potatoes, Tomatoes, Onions</p>
-          </div>
-          <div class="row">
-            <div class="col s12 center">
-              <h5>Farm Photos</h5>
-              <br>
-              <div class="slider">
-                <ul class="slides">
-                  <li><img src="img/1.jpg"></li>
-                  <li><img src="img/2.jpg"></li>
-                  <li><img src="img/3.jpg"></li>
-                  <li><img src="img/4.jpg"></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <br>
+        <br>
+        <br>
+        <br>
       </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.1/fullcalendar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
   </body>
 </html>
