@@ -7,7 +7,7 @@ var io = require('socket.io').listen(server);
 var connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
-	password: 'Amazing!',
+	password: 'Amazing!', // change
 	database: 'AgrEvent'
 });
 connection.connect();
@@ -25,11 +25,23 @@ connection.query(sql, (error, rows, fields) => {
 
 app.get('/', function(req, res){
 	// renders html file on browser
+	res.sendFile('/views/login.html', {"root": __dirname});
+});
+
+app.get('/index.html', function(req, res){
 	res.sendFile('/views/index.html', {"root": __dirname});
 });
 
 app.get('/profile.html', function(req, res){
 	res.sendFile('/views/profile.html', {"root": __dirname});
+});
+
+app.get('/signup.html', function(req, res){
+	res.sendFile('/views/signup.html', {"root": __dirname});
+});
+
+app.get('/calendar.html', function(req, res){
+	res.sendFile('/views/calendar.html', {"root": __dirname});
 });
 
 server.listen(3000);

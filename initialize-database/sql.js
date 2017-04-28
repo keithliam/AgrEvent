@@ -3,7 +3,7 @@ var readline = require('readline');
 
 var connection = mysql.createConnection({
 	user: 'root',			// change
-	password: 'Amazing!',	// change
+	password: 'root',	// change
 	multipleStatements: true
 });
 
