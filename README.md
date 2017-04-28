@@ -3,4 +3,4 @@ AgrEvent is a web app that uses HTML5, CSS3 ([MaterializeCSS](http://materialize
 
 ## Note
 * This project was not intended to be finished as it is only a prototype to be used for presentation purposes.
-* The login page and signup page are not functional and are only basic html & css files.
+* The login page and signup page are not functional and are only basic HTML & CSS files.
